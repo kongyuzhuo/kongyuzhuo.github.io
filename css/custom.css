@@ -1,7 +1,7 @@
 /*---------------- 页面样式调节---------------------- */
 :root {
-    --trans-light: rgba(255, 255, 255, 0.88);
-    --trans-dark: rgba(25, 25, 25, 0.88);
+    --trans-light: rgba(255, 255, 255, 0.8);
+    --trans-dark: rgba(25, 25, 25, 0.8);
     --border-style: 1px solid rgb(169, 169, 169);
     --backdrop-filter: blur(5px) saturate(150%);
 }
@@ -58,13 +58,13 @@ div#archive {
     /* 为载入的字体取名字(随意) */
     font-family: 'redbean';
     /* 字体文件地址(相对或者绝对路径都可以，/source 为根目录 /) */
-    src: url(/font/ZhuZiAWan.woff2);
+    src: url(/font/ZhuZiAWan.woff2) format("truetype");
     /* 定义加粗样式(加粗多少) */
     font-weight: normal;
     /* 定义字体样式(斜体/非斜体) */
     font-style: normal;
     /* 定义显示样式 */
-    font-display: block;
+    font-display: swap;
 }
 
 /*------------- 自定义字体end ------------------*/
