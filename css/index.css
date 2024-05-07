@@ -1514,7 +1514,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://wallpapers.com/images/high/white-cloudy-sky-art-tywhzdwj30upaz93.webp);
+  background: url(/img/whitecloud.jpg);
   background-attachment: local;
   background-position: center;
   background-size: cover;
