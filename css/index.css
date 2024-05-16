@@ -3505,9 +3505,10 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header #post-info {
   position: absolute;
-  bottom: 30px;
+  bottom: 150px;
   padding: 0 8%;
   width: 100%;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   #page-header #post-info {
@@ -3613,6 +3614,8 @@ h1.page-title + .tag-cloud-list {
   padding-bottom: 4px;
   border-bottom: 1px solid var(--light-grey);
   color: var(--text-highlight-color);
+  text-align: center;
+  margin-top: -8px;
 }
 #post > #post-info .post-title .post-edit-link {
   float: right;
@@ -3627,6 +3630,8 @@ h1.page-title + .tag-cloud-list {
   font-weight: normal;
   font-size: 2.5em;
   line-height: 1.5;
+  text-align: center;
+  margin-top: -8px;
   -webkit-line-clamp: 3;
 }
 @media screen and (max-width: 768px) {
