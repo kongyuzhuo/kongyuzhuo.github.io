@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>『二分法查找』算法小结</title>
+      <link href="/2024/05/20/leetcode/"/>
+      <url>/2024/05/20/leetcode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="二分查找模板"><a href="#二分查找模板" class="headerlink" title="二分查找模板"></a>二分查找模板</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">lower_bound</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>, right = (<span class="type">int</span>) nums.<span class="built_in">size</span>() - <span class="number">1</span>; </span><br><span class="line">        <span class="comment">// 闭区间 [left, right]</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123; <span class="comment">// 区间不为空</span></span><br><span class="line">            <span class="comment">// 循环不变量：</span></span><br><span class="line">            <span class="comment">// nums[left-1] &lt; target</span></span><br><span class="line">            <span class="comment">// nums[right+1] &gt;= target</span></span><br><span class="line">            <span class="type">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>; <span class="comment">// 范围缩小到 [mid+1, right]</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>; <span class="comment">// 范围缩小到 [left, mid-1]</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h1 id="常用的二分查找C-函数"><a href="#常用的二分查找C-函数" class="headerlink" title="常用的二分查找C++函数"></a>常用的二分查找C++函数</h1><ul><li>lower_bound<br>返回指向范围中<span class='p red'>第一个不小于</span>(<emp>即大于或等于</emp>)给定值的元素的迭代器</li><li>upper_bound<br>返回指向范围中<span class='p red'>第一个大于</span>给定值的元素的迭代器<h2 id="一些用法举例"><a href="#一些用法举例" class="headerlink" title="一些用法举例"></a>一些用法举例</h2></li><li><p>直接确定查找：</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">auto</span> low = std::<span class="built_in">lower_bound</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>(), <span class="number">4</span>); <span class="comment">// 找到第一个不小于 4 的位置</span></span><br></pre></td></tr></table></figure><p>位置就是：low - v.begin()<br>迭代器指向的元素用：*it去取</p></li><li><p>循环查找：</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; nums.<span class="built_in">size</span>(); ++j) </span><br><span class="line">    <span class="keyword">auto</span> r = <span class="built_in">upper_bound</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">begin</span>() + j, upper - nums[j]); </span><br><span class="line">    <span class="comment">// &lt;= upper-nums[j] 的 nums[i] 的个数</span></span><br><span class="line">    <span class="keyword">auto</span> l = <span class="built_in">lower_bound</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">begin</span>() + j, lower - nums[j]); </span><br><span class="line">    <span class="comment">// &lt; lower-nums[j] 的 nums[i] 的个数</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode刷题总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>深度学习基础语法</title>
       <link href="/2024/05/14/pytorch/"/>
       <url>/2024/05/14/pytorch/</url>
