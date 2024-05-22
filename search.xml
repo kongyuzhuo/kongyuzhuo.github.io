@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>『3Blue1Brown系列』GPT是什么</title>
+      <link href="/2024/05/21/pytorch2/"/>
+      <url>/2024/05/21/pytorch2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>GPT全称是Generative Pre-trained Transformer。<br>GPT生成的每一个词也来自于概率的预测，预测出当前词汇后再结合前面的所有词汇去预测下一个单词，即反复的预测、抽样、追加。<br>首先来总览一下数据是如何在各个模块之间流动的。</p><ul><li>输入内容会被切分成许多小片段，称为token。在文本中，token往往是单词。在图像和音频中，token一般是小块图像和声音片段。每个token对应一个向量（即一组数字），旨在设法编码该片段的意义，如下图1所示。<br><img src="/img/gpt11.jpg" alt=""></li><li>这些向量随后经过『Attention模块』的处理，使得向量之间可以互相交流，通过相互传递信息来更改自己的值。<br><img src="/img/gpt22.jpg" alt=""></li><li>之后这些向量会经过另一种处理，称为MLP『Multi-layer perceptron』或『feed-forward』。此时，向量不再相互交流，而是并行经过同一处理。</li><li>最后的统一目标是能将整段文字的所有关键含义以某种方式融入到序列的最后一个向量。然后对这个向量进行某种操作，得出所有可能token的概率分布<h1 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h1><h1 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h1><h1 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h1><h1 id="MLPs"><a href="#MLPs" class="headerlink" title="MLPs"></a>MLPs</h1><h1 id="Unembedding"><a href="#Unembedding" class="headerlink" title="Unembedding"></a>Unembedding</h1></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> Transformer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>『二分法查找』算法小结</title>
       <link href="/2024/05/20/leetcode/"/>
       <url>/2024/05/20/leetcode/</url>
